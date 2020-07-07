@@ -1,0 +1,21 @@
+#navbardrop
+{
+  color: #ffffff;
+}
+
+#navbardrop:hover
+{
+  background: #000000;
+  color: #3fbebc ;
+}
+
+#menuPrincipal
+{
+    margin-left: 400px;
+}
+
+#menuTable
+{
+    margin-left: 325px;
+    margin-top: 50px;
+}

@@ -1,0 +1,16 @@
+#navbardrop
+{
+  color: #ffffff;
+}
+
+#navbardrop:hover
+{
+  background: #000000;
+  color: #3fbebc ;
+}
+
+#listaConsecutivos
+{
+    margin-left: 400px;
+}
+

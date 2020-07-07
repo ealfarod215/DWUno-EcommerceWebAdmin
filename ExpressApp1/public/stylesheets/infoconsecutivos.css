@@ -1,0 +1,32 @@
+#navbardrop
+{
+  color: #ffffff;
+}
+
+#navbardrop:hover
+{
+  background: #000000;
+  color: #3fbebc;
+}
+
+#btnRedondoCrearConsecutivo
+{
+  font-family: Arial;
+  width: 150px;
+  font-size: 13px;
+  color:#ffffff;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid #133840(58, 133, 191, 0.75);
+  border-radius: 40px;
+  background: #133840;
+  transition: all 0.3s ease 0s;
+  margin-left: 44%;
+}
+
+#btnRedondoCrearConsecutivo:hover
+{
+    color: #133840;
+    background: #ffffff;
+    border: 2px solid #133840(58, 133, 191, 0.75);
+}

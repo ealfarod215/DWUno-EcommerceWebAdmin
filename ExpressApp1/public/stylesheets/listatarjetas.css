@@ -1,0 +1,15 @@
+#navbardrop
+{
+  color: #ffffff;
+}
+
+#navbardrop:hover
+{
+  background: #000000;
+  color: #3fbebc ;
+}
+
+#listaTarjetas
+{
+    margin-left: 400px;
+}

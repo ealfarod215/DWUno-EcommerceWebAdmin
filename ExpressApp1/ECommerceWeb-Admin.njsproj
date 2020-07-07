@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ECommerceWeb-Admin</Name>
+    <RootNamespace>ExpressApp1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>726fc96d-72a1-4252-81c4-ab9801d75236</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="public\javascripts\iniciosesionForm.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\cambiopassword.css" />
+    <Content Include="public\stylesheets\crearusuario.css" />
+    <Content Include="public\stylesheets\infoconsecutivo.css" />
+    <Content Include="public\stylesheets\infoconsecutivos.css" />
+    <Content Include="public\stylesheets\infolineacomida.css" />
+    <Content Include="public\stylesheets\infoprocesador.css" />
+    <Content Include="public\stylesheets\infoproductos.css" />
+    <Content Include="public\stylesheets\infotarjetas.css" />
+    <Content Include="public\stylesheets\infotarquetes.css" />
+    <Content Include="public\stylesheets\infotiposprecios.css" />
+    <Content Include="public\stylesheets\iniciarsesion.css" />
+    <Content Include="public\stylesheets\listaconsecutivos.css" />
+    <Content Include="public\stylesheets\listalineacomida.css" />
+    <Content Include="public\stylesheets\listaprocesador.css" />
+    <Content Include="public\stylesheets\listaproductos.css" />
+    <Content Include="public\stylesheets\listatarjetas.css" />
+    <Content Include="public\stylesheets\listatiposprecios.css" />
+    <Content Include="public\stylesheets\listatiquetes.css" />
+    <Content Include="public\stylesheets\listausuario.css" />
+    <Content Include="public\stylesheets\menuprincipal.css" />
+    <Content Include="routes\DBconnection.js" />
+    <Content Include="routes\index.js" />
+    <Content Include="routes\IngresoAlSistema.js" />
+    <Content Include="routes\PagosDBconnection.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\registroUsuario.js" />
+    <Content Include="routes\users.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\cambiopassword.hbs" />
+    <Content Include="views\crearusuario.hbs" />
+    <Content Include="views\infoconsecutivo.hbs" />
+    <Content Include="views\infoconsecutivos.hbs" />
+    <Content Include="views\infolineacomida.hbs" />
+    <Content Include="views\infoprocesador.hbs" />
+    <Content Include="views\infoproductos.hbs" />
+    <Content Include="views\infotarjetas.hbs" />
+    <Content Include="views\infotiposprecios.hbs" />
+    <Content Include="views\infotiquetes.hbs" />
+    <Content Include="views\iniciosesion.hbs" />
+    <Content Include="views\listaconsecutivos.hbs" />
+    <Content Include="views\listalineacomida.hbs" />
+    <Content Include="views\listaprocesdor.hbs" />
+    <Content Include="views\listaproductos.hbs" />
+    <Content Include="views\listatarjetas.hbs" />
+    <Content Include="views\listatiposprecios.hbs" />
+    <Content Include="views\listatiquetes.hbs" />
+    <Content Include="views\listaususario.hbs" />
+    <Content Include="views\menuprincipal.hbs" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
