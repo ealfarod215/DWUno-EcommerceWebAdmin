@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -73,19 +73,50 @@
     </div>
 
     <div class="container">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Tipo Consecutivo</th>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Opcion 1</th>
-                    <th>Opcion 2</th>
-                </tr>
-            </thead>
-            <tbody id="datosLineaComida" </tbody> </table> <button id="btnNuevoConsecutivo" type="button"
-                class="btn btn-info" onclick="location.href='infolineacomida.html'">Nueva Linea de
-                Comida</button>
+
+        <div id="bodyListSection" class="overflow-auto">
+
+            <table class="table table-hover" style="width:100%; height:auto;">
+                <thead>
+                    <tr>
+                        <th>Codígo</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each LineaComida}}
+                    <tr>
+                        <td name="id{{idLineaDeComida}}">LC-{{idLineaDeComida}} </td>
+                        <td name="nombre{{idLineaDeComida}}">{{nombreLC}}</td>
+                        <td name="descripcion{{idLineaDeComida}}">{{descripcionLC}}</td>
+                        <td><button>Editar</button></td>
+                        <td><button>Eliminar</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <a href="/ListaLineaComida/mostrarLineaComida">
+                <button>
+                    Recargar
+                </button>
+            </a>
+
+        </div>
+        <!--<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Tipo Consecutivo</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Opcion 1</th>
+                <th>Opcion 2</th>
+            </tr>
+        </thead>
+        <tbody id="datosLineaComida" </tbody> </table> <button id="btnNuevoConsecutivo" type="button"
+            class="btn btn-info" onclick="location.href='infolineacomida.html'">Nueva Linea de
+            Comida</button>-->
     </div>
 
     <script src="/ProyectoWeb/E-Food/JS/Cargar/cargarLineaComida.js"></script>

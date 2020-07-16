@@ -57,6 +57,9 @@
     <Content Include="routes\DBconnection.js" />
     <Content Include="routes\index.js" />
     <Content Include="routes\IngresoAlSistema.js" />
+    <Content Include="routes\ListaLineaComida.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\PagosDBconnection.js">
       <SubType>Code</SubType>
     </Content>
