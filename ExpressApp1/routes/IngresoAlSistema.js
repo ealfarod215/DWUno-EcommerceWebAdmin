@@ -6,7 +6,6 @@ router.post('/confirmarCredenciales', function (req, res, next) {
     var login = req.body.inputEmail;
     var password = req.body.inputPassword;
 
-
     db.query("select count(*) as respuesta from tbUsuarios where loginUsuario = '"+login+"' and passwordUsuario = '"+password+"'", function (error, recordset) {
         if (error) {
             console.log("wrong");
