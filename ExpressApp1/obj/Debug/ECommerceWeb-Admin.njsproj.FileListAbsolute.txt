@@ -1,6 +1,5 @@
 D:\Cosas de la laptop\Septimo Cuatrimestre\Pruebas\ExpressApp1\ExpressApp1\obj\Debug\ECommerceWeb-Admin.njsproj.CoreCompileInputs.cache
 D:\Cosas de la laptop\Septimo Cuatrimestre\Pruebas\ExpressApp1\ExpressApp1\bin\Microsoft.NodejsTools.WebRole.dll
 D:\Cosas de la laptop\Septimo Cuatrimestre\Pruebas\ExpressApp1\ExpressApp1\obj\Debug\ECommerceWeb-Admin.njsprojAssemblyReference.cache
-C:\Users\sebas\Desktop\AAAAAAAA\DWUno-EcommerceWebAdmin\ExpressApp1\obj\Debug\ECommerceWeb-Admin.njsprojAssemblyReference.cache
-C:\Users\sebas\Desktop\AAAAAAAA\DWUno-EcommerceWebAdmin\ExpressApp1\obj\Debug\ECommerceWeb-Admin.njsproj.CoreCompileInputs.cache
-C:\Users\sebas\Desktop\AAAAAAAA\DWUno-EcommerceWebAdmin\ExpressApp1\bin\Microsoft.NodejsTools.WebRole.dll
+F:\Cosas de la laptop\Septimo Cuatrimestre\Pruebas\ExpressApp1\ExpressApp1\obj\Debug\ECommerceWeb-Admin.njsproj.CoreCompileInputs.cache
+F:\Cosas de la laptop\Septimo Cuatrimestre\Pruebas\ExpressApp1\ExpressApp1\bin\Microsoft.NodejsTools.WebRole.dll
