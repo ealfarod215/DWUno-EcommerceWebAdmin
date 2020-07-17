@@ -35,7 +35,7 @@ router.get('/infotiquetes', function (req, res, next) {
     res.render('infotiquetes', { title: 'infotiquetes' });
 });
 router.get('/listaconsecutivos', function (req, res, next) {
-    res.render('listaconsecutivos', { title: 'listaconsecutivos' });
+    res.render('listaconsecutivos', { title: 'Lista de Consecutivos' });
 });
 router.get('/listalineacomida', function (req, res, next) {
     res.render('listalineacomida', { title: 'listalineacomida' });

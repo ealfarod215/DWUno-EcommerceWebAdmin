@@ -6,12 +6,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var hbs = require('hbs');
 
 var indexRouter = require('./routes/index');
 var ingresoAlSistema = require("./routes/IngresoAlSistema");
+var listaconsecutivosRoutes = require("./routes/listaconsecutivos");
+var infoconsecutivoRoutes = require("./routes/infoconsecutivo");
 
 
 var app = express();
+
+hbs.registerPartials(__dirname + '/views/partials');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/ingresoAlSistema', ingresoAlSistema);
+app.use('/listaconsecutivos', listaconsecutivosRoutes);
+app.use('/infoconsecutivo', infoconsecutivoRoutes);
 
 
 // catch 404 and forward to error handler
