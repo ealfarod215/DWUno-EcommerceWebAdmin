@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="/stylesheets/listaconsecutivos.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {{> header}}
+    <div class="container">
+                <h1 style="margin-top : 2rem; margin-bottom : 2rem" id="listaConsecutivos">{{title}}</h1>
+        <!-- Search form -->
+                <form class="form-inline md-form mr-auto mb-4 needs-validation" method="post" action="/listaPedidos/filtrarListaPedidos">
+                    <input id="inputBusqueda" name="inputBusqueda" class="form-control mr-sm-2" type="text" placeholder="Digite el ID" aria-label="Search" required>
+                    <button class="btn btn-info" type="submit">Buscar</button>
+                    <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/listaPedidos/listarTodosPedidos'">Refrescar Lista</button>
+                    <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/agregarPedido/listarID'">Nuevo</button>
+                    <button id="btnEliminar" type="button" class="btn btn-info" style="margin-left : 1rem" onclick="funcionEliminar()">Eliminar</button>
+                </form>
+        <div id="bodyListSection" class="overflow-auto">
+
+            <table class="table table-hover" style="width:100%; height:auto;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each resultado}}
+                    <tr>
+                        <td>{{idPedido}} </td>
+                        <td>{{fechaPedido}}</td>
+                        <td>{{clientePedido}}</td>
+                        <td><button id="btnNuevoConsecutivo" type="button" class="btn btn-info" onclick="location.href='/infoPedidos/listarID'">Editar</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <h1 style="text-align: center; color: #A94442; border-radius: 1rem; background-color: #F3DEDE; ">
+                {{mensaje}}
+            </h1>
+        </div>
+    </div>
+
+    <script>
+        function funcionEliminar() {
+
+            btnEliminar.setAttribute("formaction", "../listaPedidos/eliminarRegistro")
+            btnEliminar.setAttribute("type", "submit");
+        }
+    </script>
+</body>
+
+</html>

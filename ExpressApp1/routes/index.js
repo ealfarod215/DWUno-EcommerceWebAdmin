@@ -67,5 +67,17 @@ router.get('/menuprincipal', function (req, res, next) {
     res.render('menuprincipal', { title: 'menuprincipal' });
 });
 
+router.get('/listaPedidos', function (req, res, next) {
+    res.render('listaPedidos', { title: 'Lista de Pedidos' });
+});
+
+router.get('/agregarPedido', function (req, res, next) {
+    res.render('agregarPedido', { title: 'Agrega Pedidos' });
+});
+
+router.get('/infoPedidos', function (req, res, next) {
+    res.render('infoPedidos', { title: 'Info de Pedidos' });
+});
+
 
 module.exports = router;

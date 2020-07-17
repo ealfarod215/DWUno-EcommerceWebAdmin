@@ -14,7 +14,10 @@ var indexRouter = require('./routes/index');
 var ingresoAlSistema = require("./routes/IngresoAlSistema");
 var listaconsecutivosRoutes = require("./routes/listaconsecutivos");
 var infoconsecutivoRoutes = require("./routes/infoconsecutivo");
-var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo")
+var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo");
+var listaPedidosRoutes = require("./routes/listaPedidos");
+var infoPedidosRoutes = require("./routes/infopedidos");
+var agregarPedidoRoutes = require("./routes/agregarPedido");
 
 
 var app = express();
@@ -48,11 +51,13 @@ app.use('/', indexRouter);
 app.use('/ingresoAlSistema', ingresoAlSistema);
 app.use('/listaconsecutivos', listaconsecutivosRoutes);
 app.use('/infoconsecutivo', infoconsecutivoRoutes);
-app.use('/agregarConsecutivo', agregarConsecutivoRoutes)
-
+app.use('/agregarConsecutivo', agregarConsecutivoRoutes);
+app.use('/listaPedidos', listaPedidosRoutes);
+app.use('/infoPedidos', infoPedidosRoutes);
+app.use('/agregarPedido', agregarPedidoRoutes);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
@@ -63,7 +68,7 @@ app.use(function (req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
+    app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -74,7 +79,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
@@ -84,6 +89,6 @@ app.use(function (err, req, res, next) {
 
 app.set('port', process.env.PORT || 3000);
 
-var server = app.listen(app.get('port'), function () {
+var server = app.listen(app.get('port'), function() {
     debug('Express server listening on port ' + server.address().port);
 });

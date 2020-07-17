@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var db = require('./DBconnection');
 
-router.get('/listarID', function (req, res, next) {
-    db.query('SELECT idConsecutivo FROM tbConsecutivos', function (error, rows) {
+router.get('/listarID', function(req, res, next) {
+    db.query('SELECT idConsecutivo FROM tbConsecutivos', function(error, rows) {
         if (error) {
             console.log('error en el listado');
             return;
@@ -15,7 +15,7 @@ router.get('/listarID', function (req, res, next) {
 });
 
 
-router.post('/editar', function (req, res, next) {
+router.post('/editar', function(req, res, next) {
     var idConsecutivo = req.body.idConsecutivo;
     var descripcionConsecutivo = req.body.desConsecutivo;
     var valorConsecutivo = req.body.valorConsecutivo;
@@ -27,7 +27,7 @@ router.post('/editar', function (req, res, next) {
         req.flash('errorRegistro', 'Error en la operacion!!!');
         res.redirect('infoconsecutivo/listarID');
     } else {
-        db.query("EXEC spEditarConsecutivo @idConsecutivo = '"+idConsecutivo+"', @valorConsecutivo = '"+valorConsecutivo+"', @descripcionConsecutivo = '"+descripcionConsecutivo+"', @poseePrefijo = '"+poseePrefijo+"', @prefijoConsecutivo = '"+prefijoConsecutivo+"'", function (error, rows) {
+        db.query("EXEC spEditarConsecutivo @idConsecutivo = '" + idConsecutivo + "', @valorConsecutivo = '" + valorConsecutivo + "', @descripcionConsecutivo = '" + descripcionConsecutivo + "', @poseePrefijo = '" + poseePrefijo + "', @prefijoConsecutivo = '" + prefijoConsecutivo + "'", function(error, rows) {
             if (error) {
                 console.log("wrong");
                 req.flash('errorRegistro', 'Error en la operacion!!!');

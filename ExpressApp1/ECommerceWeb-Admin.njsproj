@@ -57,16 +57,21 @@
     <Content Include="public\stylesheets\listatiquetes.css" />
     <Content Include="public\stylesheets\listausuario.css" />
     <Content Include="public\stylesheets\menuprincipal.css" />
+    <Content Include="routes\agregarPedido.js" />
     <Content Include="routes\DBconnection.js" />
     <Content Include="routes\index.js" />
     <Content Include="routes\infoconsecutivo.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\infopedidos.js" />
     <Content Include="routes\IngresoAlSistema.js" />
     <Content Include="routes\agregarConsecutivo.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\listaconsecutivos.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\listaPedidos.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\PagosDBconnection.js">
@@ -87,11 +92,13 @@
     <Folder Include="views\partials\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\agregarPedido.hbs" />
     <Content Include="views\cambiopassword.hbs" />
     <Content Include="views\crearusuario.hbs" />
     <Content Include="views\infoconsecutivo.hbs" />
     <Content Include="views\agregarConsecutivo.hbs" />
     <Content Include="views\infolineacomida.hbs" />
+    <Content Include="views\infoPedidos.hbs" />
     <Content Include="views\infoprocesador.hbs" />
     <Content Include="views\infoproductos.hbs" />
     <Content Include="views\infotarjetas.hbs" />
@@ -100,6 +107,7 @@
     <Content Include="views\iniciosesion.hbs" />
     <Content Include="views\listaconsecutivos.hbs" />
     <Content Include="views\listalineacomida.hbs" />
+    <Content Include="views\listaPedidos.hbs" />
     <Content Include="views\listaprocesdor.hbs" />
     <Content Include="views\listaproductos.hbs" />
     <Content Include="views\listatarjetas.hbs" />
