@@ -34,6 +34,9 @@
     <Content Include="public\javascripts\iniciosesionForm.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\javascripts\listaConsecutivosFunciones.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\stylesheets\cambiopassword.css" />
     <Content Include="public\stylesheets\crearusuario.css" />
     <Content Include="public\stylesheets\infoconsecutivo.css" />
@@ -56,7 +59,13 @@
     <Content Include="public\stylesheets\menuprincipal.css" />
     <Content Include="routes\DBconnection.js" />
     <Content Include="routes\index.js" />
+    <Content Include="routes\infoconsecutivo.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\IngresoAlSistema.js" />
+    <Content Include="routes\listaconsecutivos.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\PagosDBconnection.js">
       <SubType>Code</SubType>
     </Content>
@@ -72,6 +81,7 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
+    <Folder Include="views\partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="views\cambiopassword.hbs" />
@@ -94,6 +104,7 @@
     <Content Include="views\listatiquetes.hbs" />
     <Content Include="views\listaususario.hbs" />
     <Content Include="views\menuprincipal.hbs" />
+    <Content Include="views\partials\header.hbs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config" />
   </ItemGroup>
