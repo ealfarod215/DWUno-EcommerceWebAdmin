@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,13 +28,18 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/HTML/listaconsecutivos.html">Consecutivos</a>
-                    <a class="dropdown-item" href="/HTML/listatarjetas.html">Tarjetas
-                        Credito/Debito</a>
+                    <a class="dropdown-item" href="/HTML/listatarjetas.html">
+                        Tarjetas
+                        Credito/Debito
+                    </a>
                     <a class="dropdown-item" href="/HTML/listaprocesdor.html">Metodos de pago</a>
                     <a class="dropdown-item" href="/HTML/listatiposprecios.html">Tipo de Precio</a>
-                    <a class="dropdown-item" href="/HTML/listatiquetes.html">Tiquetes de
-                        Descuento</a>
-                    <a class="dropdown-item" href="/HTML/listalineacomida.html">Lineas de Comida
+                    <a class="dropdown-item" href="/HTML/listatiquetes.html">
+                        Tiquetes de
+                        Descuento
+                    </a>
+                    <a class="dropdown-item" href="/HTML/listalineacomida.html">
+                        Lineas de Comida
                         <a class="dropdown-item" href="/HTML/listaproductos.html">Productos</a>
                     </a>
                 </div>
@@ -62,27 +69,16 @@
         </ul>
     </nav>
 
-    <img class="img1" style="margin-left: 15%;" src="/ProyectoWeb/E-Food/IMG/background.jpg" alt="">
-
     <div class="menuPrincipal">
         <div class="welcome">
-            <h1 class="ffff"  style="margin-left: 700px;">Información Linea de Comida</h1>
+            <h1 class="ffff" style="margin-left: 700px;">Información Linea de Comida</h1>
         </div>
     </div>
 
-    <div class="container"  style="margin-top: 100px; margin-right: 100px;">
-        <form id="frmInfromacionConsecutivo" class="form-horizontal">
+    <div class="container" style="margin-top: 100px; margin-right: 100px;">
+        <form id="frmInfromacionConsecutivo" class="form-horizontal " method="post">
             <fieldset id="fieldset">
 
-                <div class="form-group row">
-                    <label class="col-md-1 control-label" for="tipoConsecutivo">Rol: </label>
-                    <div class="col-md-5">
-                        <select name="tipoConsecutivo" id="tipoConsecutivo">
-                            <option value="5">Administrativo</option>
-                            <option value="6">Mantenimiento</option>
-                        </select>
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <label class="col-md-1 control-label" for="codigoLineaComida">Código: </label>
@@ -93,7 +89,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-md-1 control-label" for="descripcion">Descripción: </label>
+                    <label class="col-md-1 control-label" for="descripcion">Nombre: </label>
                     <div class="col-md-5">
                         <input id="nombre" name="nombre" type="text" placeholder="Nombre"
                                class="form-control input-md">
@@ -111,22 +107,49 @@
                 <div class="form-group row">
                     <label class="col-md-2 control-label" for="btnRedondo"></label>
                     <div class="col-md-8">
-                        <button id="btnRedondoTarjetas" name="btnGuardar" type="button" class="btn btn-primary">
-                            Guardar
+                        <button id="btnEditar" name="btnEditar" type="button" class="btn btn-primary" onclick="editarCallBack()">
+                            Editar
                         </button>
-                        <button id="btnRedondoTarjetas" name="btnEliminar" type="button" class="btn btn-primary">
+
+
+                        <button id="btnEliminar" name="btnEliminar" type="button" class="btn btn-primary" onclick="eliminarCallBack()">
                             Eliminar
                         </button>
-                        <button id="btnRedondoTarjetas" name="btnModificar" type="button" class="btn btn-primary">
-                            Modificar
+
+
+                        <button id="btnAgregar" name="btnAgregar" type="button" class="btn btn-primary" onclick="agregarCallBack()">
+                            Agregar
                         </button>
                     </div>
                 </div>
+
             </fieldset>
         </form>
     </div>
 
-    <script src="/ProyectoWeb/E-Food/JS/Informacion/informacionLineaComida.js"></script>
+    <script>
+        var btnAgregar = document.getElementById("btnAgregar");
+        var btnEditar = document.getElementById("btnEditar");
+        var btnEliminar = document.getElementById("btnEliminar");
+
+        function agregarCallBack() {
+            btnAgregar.setAttribute("formaction", "/InfoLineaComida/agregarLineaComida");
+            btnAgregar.setAttribute("type", "submit");
+        }
+
+        function editarCallBack() {
+            btnEditar.setAttribute("formaction", "/InfoLineaComida/editarLineaComida");
+            btnEditar.setAttribute("type", "submit");
+        }
+
+        function eliminarCallBack() {
+            btnEliminar.setAttribute("formaction", "/InfoLineaComida/eliminarLineaComida");
+            btnEliminar.setAttribute("type", "submit");
+        }
+
+    </script>
+
+    <script src="/javascripts/validaciones.js"></script>
 </body>
 
 </html>

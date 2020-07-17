@@ -35,6 +35,9 @@
     <Content Include="public\javascripts\iniciosesionForm.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\javascripts\validaciones.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\stylesheets\cambiopassword.css" />
     <Content Include="public\stylesheets\crearusuario.css" />
     <Content Include="public\stylesheets\infoconsecutivo.css" />
