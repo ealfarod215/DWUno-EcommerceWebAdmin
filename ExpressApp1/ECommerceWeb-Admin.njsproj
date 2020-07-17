@@ -62,11 +62,17 @@
     <Content Include="routes\infoconsecutivo.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\infotiposprecios.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\IngresoAlSistema.js" />
     <Content Include="routes\agregarConsecutivo.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\listaconsecutivos.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\listatiposprecios.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\PagosDBconnection.js">

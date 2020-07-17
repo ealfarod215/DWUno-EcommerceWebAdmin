@@ -14,7 +14,9 @@ var indexRouter = require('./routes/index');
 var ingresoAlSistema = require("./routes/IngresoAlSistema");
 var listaconsecutivosRoutes = require("./routes/listaconsecutivos");
 var infoconsecutivoRoutes = require("./routes/infoconsecutivo");
-var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo")
+var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo");
+var listatipospreciosRoutes = require("./routes/listatiposprecios");
+var infotipospreciosRoutes = require("./routes/infotiposprecios");
 
 
 var app = express();
@@ -48,7 +50,9 @@ app.use('/', indexRouter);
 app.use('/ingresoAlSistema', ingresoAlSistema);
 app.use('/listaconsecutivos', listaconsecutivosRoutes);
 app.use('/infoconsecutivo', infoconsecutivoRoutes);
-app.use('/agregarConsecutivo', agregarConsecutivoRoutes)
+app.use('/agregarConsecutivo', agregarConsecutivoRoutes);
+app.use('/listatiposprecios', listatipospreciosRoutes);
+app.use('/infotiposprecios', infotipospreciosRoutes);
 
 
 // catch 404 and forward to error handler
