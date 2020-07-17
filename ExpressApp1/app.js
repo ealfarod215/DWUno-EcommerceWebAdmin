@@ -11,6 +11,8 @@ var indexRouter = require('./routes/index');
 var ingresoAlSistema = require("./routes/IngresoAlSistema");
 var listaLineaComida = require("./routes/ListaLineaComida");
 var infoLineaComida = require("./routes/InfoLineaComida");
+var listaProductos = require("./routes/ListaProductos");
+var infoProductos = require("./routes/InfoProductos");
 
 var app = express();
 
@@ -32,6 +34,8 @@ app.use('/', indexRouter);
 app.use('/ingresoAlSistema', ingresoAlSistema);
 app.use('/ListaLineaComida', listaLineaComida);
 app.use('/InfoLineaComida', infoLineaComida);
+app.use('/ListaProductos', listaProductos);
+app.use('/InfoProductos', infoProductos);
 
 
 // catch 404 and forward to error handler

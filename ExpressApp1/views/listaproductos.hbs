@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -71,25 +71,41 @@
     </div>
 
     <div class="container">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Tipo Consecutivo</th>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Linea Comida</th>
-                    <th>Contenido</th>
-                    <th>Tipo Precio</th>
-                    <th>Opcion 1</th>
-                    <th>Opcion 2</th>
-                </tr>
-            </thead>
-            <tbody id="datosProducto">
-                
-            </tbody>
-        </table>
-        <button id="btnNuevoConsecutivo" type="button" class="btn btn-info"
-            onclick="location.href='infoproductos.html'">Nuevo Producto</button>
+        <div id="bodyListSection" class="overflow-auto">
+
+            <table class="table table-hover" style="width:100%; height:auto;">
+                <thead>
+                    <tr>
+                        <th>Codígo</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Nombre - Linea de Comida</th>
+                        <th>Contenido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each Producto}}
+                    <tr>
+                        <td name="id{{idProductos}}">P-{{idProductos}} </td>
+                        <td name="nombre{{nombre}}">{{nombre}}</td>
+                        <td name="descripcion{{descripcion}}">{{descripcion}}</td>
+                        <td name="nombreLC{{nombreLC}}">{{nombreLC}}</td>
+                        <td name="contenido{{contenido}}">{{contenido}}</td>
+                        <td><a href="/infoproductos"><button>Agregar</button></a></td>
+                        <td><a href="/infoproductos"><button>Editar</button></a></td>
+                        <td><a href="/infoproductos"><button>Eliminar</button></a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <a href="/ListaProductos/mostrarProducto">
+                <button>
+                    Recargar
+                </button>
+            </a>
+
+        </div>
     </div>
 
 <script src="/ProyectoWeb/E-Food/JS/Cargar/cargarProductos.js"></script>
