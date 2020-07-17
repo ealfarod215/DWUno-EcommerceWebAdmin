@@ -23,6 +23,7 @@
                     <input id="inputBusqueda" name="inputBusqueda" class="form-control mr-sm-2" type="text" placeholder="Digite el Prefijo" aria-label="Search" required>
                     <button class="btn btn-info" type="submit">Buscar</button>
                     <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/listaconsecutivos/listarTodosConsecutivos'">Refrescar Lista</button>
+                    <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/agregarConsecutivo'">Nuevo</button>
                     <button id="btnEliminar" type="button" class="btn btn-info" style="margin-left : 1rem" onclick="funcionEliminar()">Eliminar</button>
                 </form>
         <div id="bodyListSection" class="overflow-auto">
@@ -46,7 +47,7 @@
                         <td>{{descConsecutivo}}</td>
                         <td>{{poseePrefijo}}</td>
                         <td>{{prefijo}}</td>
-                        <td><button id="btnNuevoConsecutivo" type="button" class="btn btn-info" onclick="location.href='/infoconsecutivos/listarTodosConsecutivos'">Editar</button></td>
+                        <td><button id="btnNuevoConsecutivo" type="button" class="btn btn-info" onclick="location.href='/infoconsecutivo/listarID'">Editar</button></td>
                     </tr>
                     {{/each}}
                 </tbody>
