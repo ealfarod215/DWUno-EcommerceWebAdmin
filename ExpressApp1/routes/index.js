@@ -8,11 +8,11 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/infoconsecutivo', function(req, res, next) {
-    res.render('infoconsecutivo', { title: 'infoconsecutivo' });
+    res.render('infoconsecutivo', { title: 'Editar Consecutivos' });
 });
 
-router.get('/infoconsecutivos', function(req, res, next) {
-    res.render('infoconsecutivos', { title: 'infoconsecutivos' });
+router.get('/agregarConsecutivo', function(req, res, next) {
+    res.render('agregarConsecutivo', { title: 'Agregar Consecutivos' });
 });
 
 router.get('/infolineacomida', function(req, res, next) {

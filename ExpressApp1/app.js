@@ -3,8 +3,10 @@ var debug = require('debug');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var flash = require('express-flash');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var hbs = require('hbs');
 
@@ -12,6 +14,7 @@ var indexRouter = require('./routes/index');
 var ingresoAlSistema = require("./routes/IngresoAlSistema");
 var listaconsecutivosRoutes = require("./routes/listaconsecutivos");
 var infoconsecutivoRoutes = require("./routes/infoconsecutivo");
+var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo")
 
 
 var app = express();
@@ -32,10 +35,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+    cookie: { maxAge: 60000 },
+    secret: 'woot',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(flash());
+
 app.use('/', indexRouter);
 app.use('/ingresoAlSistema', ingresoAlSistema);
 app.use('/listaconsecutivos', listaconsecutivosRoutes);
 app.use('/infoconsecutivo', infoconsecutivoRoutes);
+app.use('/agregarConsecutivo', agregarConsecutivoRoutes)
 
 
 // catch 404 and forward to error handler

@@ -34,7 +34,7 @@
     <Content Include="public\javascripts\iniciosesionForm.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\javascripts\listaConsecutivosFunciones.js">
+    <Content Include="public\javascripts\alertas.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\stylesheets\cambiopassword.css" />
@@ -63,6 +63,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\IngresoAlSistema.js" />
+    <Content Include="routes\agregarConsecutivo.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\listaconsecutivos.js">
       <SubType>Code</SubType>
     </Content>
@@ -87,7 +90,7 @@
     <Content Include="views\cambiopassword.hbs" />
     <Content Include="views\crearusuario.hbs" />
     <Content Include="views\infoconsecutivo.hbs" />
-    <Content Include="views\infoconsecutivos.hbs" />
+    <Content Include="views\agregarConsecutivo.hbs" />
     <Content Include="views\infolineacomida.hbs" />
     <Content Include="views\infoprocesador.hbs" />
     <Content Include="views\infoproductos.hbs" />
