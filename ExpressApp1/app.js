@@ -18,7 +18,8 @@ var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo");
 var listaPedidosRoutes = require("./routes/listaPedidos");
 var infoPedidosRoutes = require("./routes/infopedidos");
 var agregarPedidoRoutes = require("./routes/agregarPedido");
-
+var listaTiquetesRoutes = require("./routes/listaTiquetes");
+var infoTiquetesRoutes = require("./routes/infotiquetes");
 
 var app = express();
 
@@ -55,6 +56,8 @@ app.use('/agregarConsecutivo', agregarConsecutivoRoutes);
 app.use('/listaPedidos', listaPedidosRoutes);
 app.use('/infoPedidos', infoPedidosRoutes);
 app.use('/agregarPedido', agregarPedidoRoutes);
+app.use('/listaTiquetes', listaTiquetesRoutes);
+app.use('/infotiquetes', infoTiquetesRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

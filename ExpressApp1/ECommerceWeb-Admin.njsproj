@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\infopedidos.js" />
+    <Content Include="routes\infotiquetes.js" />
     <Content Include="routes\IngresoAlSistema.js" />
     <Content Include="routes\agregarConsecutivo.js">
       <SubType>Code</SubType>
@@ -72,6 +73,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\listaPedidos.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\listaTiquetes.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\PagosDBconnection.js">

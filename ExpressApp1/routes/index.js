@@ -79,5 +79,8 @@ router.get('/infoPedidos', function (req, res, next) {
     res.render('infoPedidos', { title: 'Info de Pedidos' });
 });
 
+router.get('/listaTiquetes', function (req, res, next) {
+    res.render('listatiquetes', { title: 'Lista de tiquetes' });
+});
 
 module.exports = router;
