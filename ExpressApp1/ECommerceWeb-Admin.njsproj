@@ -72,6 +72,9 @@
     <Content Include="routes\listaconsecutivos.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\listatarjetas.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\listatiposprecios.js">
       <SubType>Code</SubType>
     </Content>

@@ -21,7 +21,7 @@
         <h1 style="margin-top : 2rem; margin-bottom : 2rem" id="listaConsecutivos" class="text-center">{{title}}</h1>
         <!-- Search form -->
         <form class="form-inline md-form mr-auto mb-4 needs-validation" method="post" action="/listatiposprecios/filtrarLista">
-            <input id="inputBusqueda" name="inputBusqueda" class="form-control mr-sm-2" type="text" placeholder="Digite el ID" aria-label="Search" required>
+            <input id="inputBusqueda" name="inputBusqueda" class="form-control mr-sm-2" type="number" placeholder="Digite Numero del ID" aria-label="Search" required>
             <button class="btn btn-info" type="submit">Buscar</button>
             <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/listatiposprecios/listarTodosTipoPrecio'">Refrescar Lista</button>
             <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/infotiposprecios/listarID'">Agregar Nuevo o Editar</button>
@@ -40,7 +40,7 @@
                 <tbody>
                     {{#each resultado}}
                     <tr>
-                        <td>{{idTiposPrecios}} </td>
+                        <td>TP-{{idTiposPrecios}} </td>
                         <td>{{nomTP}}</td>
                         <td>{{desTP}}</td>
                     </tr>
