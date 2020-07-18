@@ -51,7 +51,7 @@ router.post('/eliminarRegistro', function (req, res, next) {
 
             } else {
                 console.log(recordset.recordset);
-                res.render('listaPedidos', { mensaje: 'Se elimino de manera Exitosa', title: 'Lista de Consecutivos'});
+                res.render('listaPedidos', { mensaje: 'Se elimino de manera Exitosa', title: 'Lista de Pedidos'});
             }
         });
     }
