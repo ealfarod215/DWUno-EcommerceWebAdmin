@@ -62,6 +62,9 @@
     <Content Include="routes\infoconsecutivo.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\infotarjetas.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\infotiposprecios.js">
       <SubType>Code</SubType>
     </Content>

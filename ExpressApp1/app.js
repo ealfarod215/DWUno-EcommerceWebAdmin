@@ -18,6 +18,7 @@ var agregarConsecutivoRoutes = require("./routes/agregarConsecutivo");
 var listatipospreciosRoutes = require("./routes/listatiposprecios");
 var infotipospreciosRoutes = require("./routes/infotiposprecios");
 var listatarjetasRoutes = require("./routes/listatarjetas");
+var infotarjetasRoutes = require("./routes/infotarjetas");
 
 
 var app = express();
@@ -55,6 +56,7 @@ app.use('/agregarConsecutivo', agregarConsecutivoRoutes);
 app.use('/listatiposprecios', listatipospreciosRoutes);
 app.use('/infotiposprecios', infotipospreciosRoutes);
 app.use('/listatarjetas', listatarjetasRoutes);
+app.use('/infotarjetas', infotarjetasRoutes);
 
 
 // catch 404 and forward to error handler

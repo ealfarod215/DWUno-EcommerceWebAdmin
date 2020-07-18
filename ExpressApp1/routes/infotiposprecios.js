@@ -40,7 +40,7 @@ router.post('/agregar', function (req, res, next) {
 });
 
 router.post('/editar', function (req, res, next) {
-    var idTipoPrecio = req.body.idConsecutivo;
+    var idTipoPrecio = req.body.idTipoPrecio;
     var idNomNewTipoPrecio = req.body.idNomNewTipoPrecio;
     var idDesNueTP = req.body.idDesNueTP;
   
