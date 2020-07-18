@@ -35,7 +35,7 @@ router.post('/editarProducto', function (req, res, next) {
         console.log("Debe de completar todos los campos.");
         res.render('InfoProductos', { mensaje: 'Debe de completar todos los campos' });
     } else {
-        db.query("EXEC ActualizarProductos @idProductos = '" + codigo + "', @nombre = '" + nombre + "', @descripcion = '" + descripcion + "', @linea = '" + linea + ", @contenido = '" + contenido + "'", function (error, rows) {
+        db.query("exec [ActualizarProductos] @idProductos = '"+codigo+"', @nombre = '"+nombre+"', @descripcion = '"+descripcion+"', @contenido= '"+contenido+"', @linea = '"+linea+"' ", function (error, rows) {
             if (error) {
                 console.error("Error");
                 res.render('InfoProductos', { mensaje: 'Error al editar la información' });
