@@ -48,25 +48,42 @@
             <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
         </form>
 
-        <form action="/signup/" class="form-signup">
+        <form method="post" action="/IngresoAlSistema/agregarUsuario" class="form-signup">
             <div class="social-login">
-                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign
-                        up with Facebook</span> </button>
+                <button class="btn facebook-btn social-btn" type="button">
+                    <span>
+                        <i class="fab fa-facebook-f"></i> Sign
+                        up with Facebook
+                    </span>
+                </button>
             </div>
             <div class="social-login">
-                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign
-                        up with Google+</span> </button>
+                <button class="btn google-btn social-btn" type="button">
+                    <span>
+                        <i class="fab fa-google-plus-g"></i> Sign
+                        up with Google+
+                    </span>
+                </button>
             </div>
 
             <p style="text-align:center">OR</p>
 
-            <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
-            <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
-            <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-            <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required
-                autofocus="">
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required="" autofocus="">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Correo Electrónica" required autofocus="">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Constraseña" required autofocus="">
+            <input type="password" id="password1" name="password1" class="form-control" placeholder="Confirmar Contraseña" required autofocus="">
+            <input type="text" id="preguntaSeguirdad" name="preguntaSeguirdad" class="form-control" placeholder="Confirmar Contraseña" required autofocus="">
+            <input type="text" id="respuestaSeguridad" name="respuestaSeguridad" class="form-control" placeholder="Respuesta de Seguridad" required autofocus="">
 
-            <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+            <label for="cars">Rol:</label>
+            <select name="rol" id="rol">
+                <option id="rol" name="rol" value="R-0">Administrador</option>
+                <option id="rol" name="rol" value="R-1">Mantenimiento</option>
+                <option id="rol" name="rol" value="R-2">Segruidad</option>
+                <option id="rol" name="rol" value="R-3">Consulta</option>
+            </select>
+
+            <button class="btn btn-primary btn-block" id="btnAgregar" type="submit" onclick="agregarCallBack()"><i class="fas fa-user-plus"></i> Sign Up</button>
             <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
         </form>
         <br>
@@ -98,6 +115,15 @@ $(()=>{
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="/javascripts/iniciosesionForm.js"></script>
+
+    <script>
+        var btnAgregar = document.getElementById("btnAgregar");
+
+        function agregarCallBack() {
+            btnAgregar.setAttribute("formaction", "/IngresoAlSistema/agregarUsuario");
+            btnAgregar.setAttribute("type", "submit");
+        }
+    </script>
 </body>
 
 </html>
