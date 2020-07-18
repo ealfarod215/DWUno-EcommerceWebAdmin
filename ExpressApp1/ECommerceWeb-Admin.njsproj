@@ -63,10 +63,12 @@
     <Content Include="routes\infoconsecutivo.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\InfoLineaComida.js" />
     <Content Include="routes\infopedidos.js" />
     <Content Include="routes\infoprocesador.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\InfoProductos.js" />
     <Content Include="routes\infotarjetas.js">
       <SubType>Code</SubType>
     </Content>
@@ -81,10 +83,12 @@
     <Content Include="routes\listaconsecutivos.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\ListaLineaComida.js" />
     <Content Include="routes\listaPedidos.js" />
     <Content Include="routes\listaprocesdor.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\ListaProductos.js" />
     <Content Include="routes\listatarjetas.js">
       <SubType>Code</SubType>
     </Content>

@@ -26,6 +26,10 @@ var infoPedidosRoutes = require("./routes/infopedidos");
 var agregarPedidoRoutes = require("./routes/agregarPedido");
 var listaTiquetesRoutes = require("./routes/listaTiquetes");
 var infoTiquetesRoutes = require("./routes/infotiquetes");
+var listaLineaComida = require("./routes/ListaLineaComida");
+var infoLineaComida = require("./routes/InfoLineaComida");
+var listaProductos = require("./routes/ListaProductos");
+var infoProductos = require("./routes/InfoProductos");
 
 var app = express();
 
@@ -70,6 +74,10 @@ app.use('/infoPedidos', infoPedidosRoutes);
 app.use('/agregarPedido', agregarPedidoRoutes);
 app.use('/listaTiquetes', listaTiquetesRoutes);
 app.use('/infotiquetes', infoTiquetesRoutes);
+app.use('/ListaLineaComida', listaLineaComida);
+app.use('/InfoLineaComida', infoLineaComida);
+app.use('/ListaProductos', listaProductos);
+app.use('/InfoProductos', infoProductos);
 
 
 // catch 404 and forward to error handler
