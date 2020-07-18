@@ -22,7 +22,7 @@ router.post('/agregarProducto', function (req, res, next) {
             }
         });
     }
-})
+});
 
 router.post('/editarProducto', function (req, res, next) {
     var codigo = req.body.codigoProducto;

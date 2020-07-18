@@ -26,13 +26,18 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/HTML/listaconsecutivos.html">Consecutivos</a>
-                    <a class="dropdown-item" href="/HTML/listatarjetas.html">Tarjetas
-                        Credito/Debito</a>
+                    <a class="dropdown-item" href="/HTML/listatarjetas.html">
+                        Tarjetas
+                        Credito/Debito
+                    </a>
                     <a class="dropdown-item" href="/HTML/listaprocesdor.html">Metodos de pago</a>
                     <a class="dropdown-item" href="/HTML/listatiposprecios.html">Tipo de Precio</a>
-                    <a class="dropdown-item" href="/HTML/listatiquetes.html">Tiquetes de
-                        Descuento</a>
-                    <a class="dropdown-item" href="/HTML/listalineacomida.html">Lineas de Comida
+                    <a class="dropdown-item" href="/HTML/listatiquetes.html">
+                        Tiquetes de
+                        Descuento
+                    </a>
+                    <a class="dropdown-item" href="/HTML/listalineacomida.html">
+                        Lineas de Comida
                         <a class="dropdown-item" href="/HTML/listaproductos.html">Productos</a>
                     </a>
                 </div>
@@ -79,6 +84,37 @@
                         <th>Codígo</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each LineaComida}}
+                    <tr>
+                        <td name="id{{idLineaDeComida}}">LC-{{idLineaDeComida}} </td>
+                        <td name="nombre{{nombreLC}}">{{nombreLC}}</td>
+                        <td name="descripcion{{descripcionLC}}">{{descripcionLC}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <a href="/ListaProductos/mostrarLineaComida">
+                <button>
+                    Recargar
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="bodyListSection" class="overflow-auto">
+
+            <table class="table table-hover" style="width:100%; height:auto;">
+                <thead>
+                    <tr>
+                        <th>Codígo</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
                         <th>Nombre - Linea de Comida</th>
                         <th>Contenido</th>
                     </tr>
@@ -108,7 +144,7 @@
         </div>
     </div>
 
-<script src="/ProyectoWeb/E-Food/JS/Cargar/cargarProductos.js"></script>
+    <script src="/ProyectoWeb/E-Food/JS/Cargar/cargarProductos.js"></script>
 </body>
 
 </html>

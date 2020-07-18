@@ -20,7 +20,7 @@ router.post('/agregarLineaComida', function (req, res, next) {
             }
         });
     }
-})
+});
 
 router.post('/editarLineaComida', function (req, res, next) {
     var codigo = req.body.codigoLineaComida;
