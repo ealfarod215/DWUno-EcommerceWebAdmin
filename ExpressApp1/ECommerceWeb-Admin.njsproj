@@ -62,6 +62,9 @@
     <Content Include="routes\infoconsecutivo.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\infoprocesador.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\infotarjetas.js">
       <SubType>Code</SubType>
     </Content>
@@ -73,6 +76,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\listaconsecutivos.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\listaprocesdor.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\listatarjetas.js">

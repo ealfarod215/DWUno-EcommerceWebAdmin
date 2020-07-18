@@ -64,7 +64,7 @@ router.get('/listaususario', function (req, res, next) {
 });
 
 router.get('/menuprincipal', function (req, res, next) {
-    res.render('menuprincipal', { title: 'menuprincipal' });
+    res.render('menuprincipal', { title: 'Menu Principal' });
 });
 
 

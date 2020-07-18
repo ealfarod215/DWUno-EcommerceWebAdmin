@@ -13,7 +13,7 @@ router.post('/confirmarCredenciales', function (req, res, next) {
             return;
         } else if (recordset.recordset[0]['respuesta'] == 1) {
             console.log("permisos concedidos");
-            res.render('menuprincipal');
+            res.render('menuprincipal', { title: "Menu Principal"});
         } else {
             console.log("permisos denegados");
             console.log(recordset);

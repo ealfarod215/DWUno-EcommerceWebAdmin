@@ -19,6 +19,8 @@ var listatipospreciosRoutes = require("./routes/listatiposprecios");
 var infotipospreciosRoutes = require("./routes/infotiposprecios");
 var listatarjetasRoutes = require("./routes/listatarjetas");
 var infotarjetasRoutes = require("./routes/infotarjetas");
+var listaprocesdorRoutes = require("./routes/listaprocesdor");
+var infoprocesadorRoutes = require("./routes/infoprocesador");
 
 
 var app = express();
@@ -57,6 +59,8 @@ app.use('/listatiposprecios', listatipospreciosRoutes);
 app.use('/infotiposprecios', infotipospreciosRoutes);
 app.use('/listatarjetas', listatarjetasRoutes);
 app.use('/infotarjetas', infotarjetasRoutes);
+app.use('/listaprocesdor', listaprocesdorRoutes);
+app.use('/infoprocesador', infoprocesadorRoutes);
 
 
 // catch 404 and forward to error handler

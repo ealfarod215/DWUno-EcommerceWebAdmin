@@ -18,99 +18,93 @@
 
 <body>
     {{> header}}
-    <div class="menuPrincipal">
-        <div class="welcome">
-            <h1 class="ffff" id="menuPrincipal">Menu Principal</h1>
-            <p id="menuPrincipal">Aqui como usuario administrador podra editar cualquier asunto administrativo, de
-                seguridad o consulta a la base de datos</p>
-        </div>
+    <div class="container">
+        <h1 style="margin-top : 2rem; margin-bottom : 2rem" id="listaConsecutivos" class="text-center">{{title}}</h1>
+        <table class="table table-bordered" id="">
+            <thead>
+                <tr>
+                    <th>Administración</th>
+                    <th>Seguridad</th>
+                    <th>Consultas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a id="btnConsecutivos" href="/listaconsecutivos/listarTodosConsecutivos">Consecutivos</a>
+                    </td>
+                    <td>
+                        <a id="btnUsuarios" href="/listaususario">Usuario</a>
+                    </td>
+                    <td>
+                        <a id="btnPedidos" href="">Pedidos</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnTarjetas" href="/listatarjetas/listarTodo">Tarjetas Credito/Debito</a>
+                    </td>
+                    <td>
+                        <a id="btnRoles" href="#">Roles</a>
+                    </td>
+                    <td>
+                        <a id="btnProductos" href="/listaproductos">Productos</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnProcesador" href="/listaprocesdor/listarTodo">
+                            Metodos de
+                            Pago
+                        </a>
+                    </td>
+                    <td>
+                        <a id="btnCambioConstrasena" href="/cambiopassword">Cambiar Contraseña</a>
+                    </td>
+                    <td>
+                        <a id="btnBitacora" href="#">Bitacora</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnTipoPrecio" href="/listatiposprecios/listarTodosTipoPrecio">
+                            Tipo de
+                            Precio
+                        </a>
+                    </td>
+                    <td>
+                        <a id="btnCrearUsuarios" href="/crearusuario">Crear Usuario</a>
+                    </td>
+                    <td>
+                        <a id="btnErrores" href="">Errores</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnTiquetes" href="/infotiquetes">
+                            Tiquetes de
+                            Descuento
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnLineaComida" href="/listalineacomida">
+                            Lineas de
+                            Comida
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="btnProductos" href="/listaproductos">Productos</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <div class="container" style="margin-left: 60px;">
-            <table class="table table-bordered" id="menuTable">
-                <thead>
-                    <tr>
-                        <th>Administración</th>
-                        <th>Seguridad</th>
-                        <th>Consultas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a id="btnConsecutivos" href="/listaconsecutivos/listarTodosConsecutivos">Consecutivos</a>
-                        </td>
-                        <td>
-                            <a id="btnUsuarios" href="/listaususario">Usuario</a>
-                        </td>
-                        <td>
-                            <a id="btnPedidos" href="">Pedidos</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnTarjetas" href="/listatarjetas/listarTodo">Tarjetas Credito/Debito</a>
-                        </td>
-                        <td>
-                            <a id="btnRoles" href="#">Roles</a>
-                        </td>
-                        <td>
-                            <a id="btnProductos" href="/listaproductos">Productos</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnProcesador" href="/listaprocesdor">
-                                Metodos de
-                                Pago
-                            </a>
-                        </td>
-                        <td>
-                            <a id="btnCambioConstrasena" href="/cambiopassword">Cambiar Contraseña</a>
-                        </td>
-                        <td>
-                            <a id="btnBitacora" href="#">Bitacora</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnTipoPrecio" href="/listatiposprecios/listarTodosTipoPrecio">
-                                Tipo de
-                                Precio
-                            </a>
-                        </td>
-                        <td>
-                            <a id="btnCrearUsuarios" href="/crearusuario">Crear Usuario</a>
-                        </td>
-                        <td>
-                            <a id="btnErrores" href="">Errores</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnTiquetes" href="/infotiquetes">
-                                Tiquetes de
-                                Descuento
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnLineaComida" href="/listalineacomida">
-                                Lineas de
-                                Comida
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a id="btnProductos" href="/listaproductos">Productos</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
     </div>
+    
 </body>
 
 </html>
