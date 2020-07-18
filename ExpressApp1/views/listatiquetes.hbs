@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,78 +17,53 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm" style="background: #000000;">
-        <a class="navbar-brand" id="navbardrop" href="/HTML/menuprincipal.html">E Administrador</a>
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Administración
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/HTML/listaconsecutivos.html">Consecutivos</a>
-                    <a class="dropdown-item" href="/HTML/listatarjetas.html">Tarjetas
-                        Credito/Debito</a>
-                    <a class="dropdown-item" href="/HTML/listaprocesdor.html">Metodos de pago</a>
-                    <a class="dropdown-item" href="/HTML/listatiposprecios.html">Tipo de Precio</a>
-                    <a class="dropdown-item" href="/HTML/listatiquetes.html">Tiquetes de
-                        Descuento</a>
-                    <a class="dropdown-item" href="/HTML/listalineacomida.html">Lineas de Comida
-                        <a class="dropdown-item" href="/HTML/listaproductos.html">Productos</a>
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Seguridad
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/HTML/listaususario.html">Usuarios</a>
-                    <a class="dropdown-item" href="#">Roles</a>
-                    <a class="dropdown-item" href="/HTML/cambiopassword.html">Cambiar Contraseña</a>
-                    <a class="dropdown-item" href="/HTML/crearusuario.html">Crear Usuario</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Consultas
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Pedidos</a>
-                    <a class="dropdown-item" href="#">Productos</a>
-                    <a class="dropdown-item" href="#">Bitacora</a>
-                    <a class="dropdown-item" href="#">Errores</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    {{> header}}
+    <div class="container">
+        <h1 style="margin-top : 2rem; margin-bottom : 2rem" id="listaConsecutivos" class="text-center">{{title}}</h1>
+        <!-- Search form -->
+        <form class="form-inline md-form mr-auto mb-4 needs-validation" method="post" action="/listaTiquetes/filtrarListaTiquetes">
+            <input id="inputBusqueda" name="inputBusqueda" class="form-control mr-sm-2" type="text" placeholder="Digite el ID" aria-label="Search" required>
+            <button class="btn btn-info" type="submit">Buscar</button>
+            <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/listaTiquetes/listarTodosTiquetes'">Refrescar Lista</button>
+            <button type="button" class="btn btn-info" style="margin-left : 1rem" onclick="location.href='/infotiquetes/listarID'">Agregar nuevo o editar</button>
+            <button id="btnEliminar" type="button" class="btn btn-info" style="margin-left : 1rem" onclick="funcionEliminar()">Eliminar</button>
+        </form>
+        <div id="bodyListSection" class="overflow-auto">
 
-    <img class="img1" style="margin-left: 15%;" src="/ProyectoWeb/E-Food/IMG/background.jpg" alt="">
+            <table class="table table-hover" style="width:100%; height:auto;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripcion</th>
+                        <th>Disponibles</th>
+                        <th>Descuento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each resultado}}
+                    <tr>
+                        <td>{{idTiqueteDescuento}} </td>
+                        <td>{{descripcionTiqueteDeDescuento}}</td>
+                        <td>{{disponiblesTiqueteDeDescuento}}</td>
+                        <td>{{descuentoTiqueteDeDescuento}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
 
-    <div class="menuPrincipal">
-        <div class="welcome">
-            <h1 class="ffff" id="listaTiquetes">Lista Tiquetes de Descuento</h1>
+            <h1 style="text-align: center; color: #A94442; border-radius: 1rem; background-color: #F3DEDE; ">
+                {{mensaje}}
+            </h1>
         </div>
     </div>
 
-    <div class="container">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Disponibles</th>
-                    <th>Opcion 1</th>
-                    <th>Opcion 2</th>
-                </tr>
-            </thead>
-            <tbody id="datosTiquetes">
-            </tbody>
-        </table>
-        <button id="btnNuevoConsecutivo" type="button" class="btn btn-info"
-            onclick="location.href='infotiquetes.html'">Nuevo Tiquete de Descuento</button>
-    </div>
+    <script>
+        function funcionEliminar() {
 
-    <script src="/ProyectoWeb/E-Food/JS/Cargar/cargarTiquetes.js"></script>
+            btnEliminar.setAttribute("formaction", "../listatiquetes/eliminarRegistro")
+            btnEliminar.setAttribute("type", "submit");
+        }
+    </script>
 </body>
 
 </html>

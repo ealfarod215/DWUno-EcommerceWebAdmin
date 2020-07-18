@@ -21,7 +21,11 @@ var listatarjetasRoutes = require("./routes/listatarjetas");
 var infotarjetasRoutes = require("./routes/infotarjetas");
 var listaprocesdorRoutes = require("./routes/listaprocesdor");
 var infoprocesadorRoutes = require("./routes/infoprocesador");
-
+var listaPedidosRoutes = require("./routes/listaPedidos");
+var infoPedidosRoutes = require("./routes/infopedidos");
+var agregarPedidoRoutes = require("./routes/agregarPedido");
+var listaTiquetesRoutes = require("./routes/listaTiquetes");
+var infoTiquetesRoutes = require("./routes/infotiquetes");
 
 var app = express();
 
@@ -61,6 +65,11 @@ app.use('/listatarjetas', listatarjetasRoutes);
 app.use('/infotarjetas', infotarjetasRoutes);
 app.use('/listaprocesdor', listaprocesdorRoutes);
 app.use('/infoprocesador', infoprocesadorRoutes);
+app.use('/listaPedidos', listaPedidosRoutes);
+app.use('/infoPedidos', infoPedidosRoutes);
+app.use('/agregarPedido', agregarPedidoRoutes);
+app.use('/listaTiquetes', listaTiquetesRoutes);
+app.use('/infotiquetes', infoTiquetesRoutes);
 
 
 // catch 404 and forward to error handler

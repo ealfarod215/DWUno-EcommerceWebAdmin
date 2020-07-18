@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Información Consecutivos</title>
+
+    <link rel="stylesheet" href="/stylesheets/listaconsecutivos.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    {{> header}}
+
+
+    <h1 style="margin-top : 2rem; margin-bottom : 2rem" class="text-center">{{title}}</h1>
+
+    <div class="container errorR" role="alert">
+        <h1 class="text-center align-content-center">
+            {{messages.errorRegistro}}
+        </h1>
+    </div>
+    <div class="container exitoR" role="alert">
+        <h1 class="text-center align-content-center">
+            {{messages.exitoRegistro}}
+        </h1>
+    </div>
+
+    <div class="container">
+        <form class="needs-validation" method="post"
+              action="/agregarPedido/agregar">
+
+            <div class="form-group d-flex justify-content-center align-items-center">
+                <div class="col-md-5">
+                    <input id="fechaPedido" name="fechaPedido" type="date" placeholder="Nueva fecha" class="form-control input-md" required>
+                </div>
+            </div>
+
+            <div class="form-group d-flex justify-content-center align-items-center">
+                <div class="col-md-5">
+                    <select name="clientePedido" id="clientePedido" class="form-control input-md">
+                        <option value="">Cliente</option>
+                        {{#each cliente}}
+                        <option value="{{idCliente}}">{{nomCliente}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-center align-items-center">
+                <button id="btnRedondoCrearConsecutivo" type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/javascripts/alertas.js"></script>
+</body>
+
+</html>
